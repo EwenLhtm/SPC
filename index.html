@@ -2,10 +2,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/reset.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9d6f997c2b.js" crossorigin="anonymous"></script>
         <title>Sup de cuisine</title>
     </head>
     <body>
@@ -15,20 +17,23 @@
         </header>
         <div class="content">
             <div class="recherche">
-                <select id="ingredients">
-                    <option value="" selected hidden disabled>Ingrédients</option>
-                </select>
-                <select id="appareils">
-                    <option value="">Appareils</option>
-                </select>
-                <select id="ustensiles">
-                    <option value="">Ustensiles</option>
-                </select>
+                <div class="select">
+                    <input placeholder="Ingrédients" disabled></input>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="select">
+                    <input placeholder="Appareils" disabled></input>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="select">
+                    <input placeholder="Ustensiles" disabled></input>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
                 <p>* recettes</p>
             </div>
             <div class="recettes">
                 <div class="card">
-                    <img href="images/placeholder.png" class="imgRecette">
+                    <img src="/images/Recette01.jpg">
                     <h3>Limonade de coco</h3>
                     <p>Recette</p>
                     <p class="textRecette">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, pariatur qui. Reiciendis numquam aperiam facere fugiat nam inventore in! Quae ex nihil sit ut facilis alias vitae doloremque iste neque!</p>
@@ -57,7 +62,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img href="images/placeholder.png" class="imgRecette">
+                    <img src="/images/Recette02.jpg">
                     <h3>Poisson cru à la tahitienne</h3>
                     <p>Recette</p>
                     <p class="textRecette">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, pariatur qui. Reiciendis numquam aperiam facere fugiat nam inventore in! Quae ex nihil sit ut facilis alias vitae doloremque iste neque!</p>
@@ -90,7 +95,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img href="images/placeholder.png" class="imgRecette">
+                    <img src="/images/Recette03.jpg">
                     <h3>Salade de riz</h3>
                     <p>Recette</p>
                     <p class="textRecette">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, pariatur qui. Reiciendis numquam aperiam facere fugiat nam inventore in! Quae ex nihil sit ut facilis alias vitae doloremque iste neque!</p>
@@ -122,6 +127,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </body>

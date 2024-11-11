@@ -6,17 +6,110 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../images/Recette09.jpg');
-    background-size: cover;
     padding-top: 125px;
     padding-bottom: 125px;
     text-align: center;
+    color: black;
+    background-image: url('../images/header.avif');
+    background-size: cover;
+
+    input{
+        width: 40%;
+        height: 50px;
+        background:white url('../images/loupe.jpg') no-repeat right;
+        background-size: 50px;
+        padding-right:40px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
 }
 
-header input {
-    width: 40%;
-    height: 50px;
-    background:white url('../images/loupe.jpg') no-repeat right;
-    background-size: 50px;
-    padding-right:40px;
+.content{
+    margin-top: 25px;
+    margin-right: 100px;
+    margin-left: 100px;
+
+    .recherche{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    
+        .select{
+            flex-basis: calc(25%-10px);
+            height: 25px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px 10px 0px 5px;
+
+            input{
+                width: 100px;
+            }
+        }
+    
+        p{
+            flex-basis: calc(25%-10px);
+        }
+    }
+
+    .recettes {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+    
+        .card{
+            flex-basis: calc(33.333% - 50px);
+            border: 1px solid black;
+            height: fit-content;
+        
+            img{
+                width: 100%;
+                height: 450px;
+            }
+
+            :not(:first-child){
+                padding-left: 15px;
+            }
+
+            p {
+                color: gray;
+            }
+    
+            .textRecette {
+                color: black;
+                font-size: 75%;
+            }
+    
+            .ingredients{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding-right: 15px; 
+                
+                
+                .ingredient{
+                    display: felx;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    
+                    .nomIngredient{
+                        color: black;
+                        
+                    }
+    
+                    .quantité{
+                        font-size: 75%;
+                    }
+                }
+            }
+        
+        }
+    }
 }
+
+
+
+
+
+
+
