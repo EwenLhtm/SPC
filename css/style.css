@@ -51,7 +51,7 @@ header {
         }
     }
 
-    .recettes {
+    #recettes {
         margin-top: 25px;
         display: flex;
         flex-wrap: wrap;
@@ -61,10 +61,13 @@ header {
             flex-basis: calc(33.333% - 50px);
             border: 1px solid black;
             height: fit-content;
+            border-radius: 10px;
         
             img{
                 width: 100%;
                 height: 450px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
 
             :not(:first-child){
@@ -97,7 +100,7 @@ header {
                         
                     }
     
-                    .quantité{
+                    .quantite{
                         font-size: 75%;
                     }
                 }
