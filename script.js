@@ -35,8 +35,9 @@ function createCard(recipe){
     // image
     const img = document.createElement('img');
     img.src = '/images/' + recipe.image;
+    img.alt = `${recipe.name}`;
     // Nom de la recette
-    const h3Nom = document.createElement('h3');
+    const h3Nom = document.createElement('h2');
     h3Nom.textContent = recipe.name;
     // Titre recette
     const pRecette = document.createElement('p')
@@ -110,7 +111,6 @@ function createTag(motCle){
 }
 
 function ajoutContenuSelect(selectId, items) {
-    console.log(items);
     const select = document.getElementById(selectId);
     const lstMotCle = select.getElementsByClassName('listMotCle')[0];
     lstMotCle.innerHTML = '';
@@ -178,7 +178,6 @@ function fetchRecipe(){
 
 document.addEventListener('fetchEvent', () => {
     const divRecettes = document.getElementById('recettes');
-    console.log(recipes);
 
     recipes.forEach(recipe => {
         let newCard = createCard(recipe);
@@ -199,7 +198,6 @@ document.addEventListener('fetchEvent', () => {
             const inputRecherche = document.getElementById('chercheRecette');
             if (inputRecherche.value.length > 2){
                 let data = inputRecherche.value.split(',');
-                console.log(data);
                 data.forEach(mot => {
                     mot = mot.trim();
                     if (!filtres.includes(mot)){
@@ -268,8 +266,6 @@ document.addEventListener('filtreEvent', () => {
         document.getElementById('nbRecettes').textContent = `${recipes.length} recettes`;
     }
 });
-
-
 
 fetchRecipe();
 
