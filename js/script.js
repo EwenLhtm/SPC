@@ -267,5 +267,8 @@ document.addEventListener('filtreEvent', () => {
     }
 });
 
-fetchRecipe();
+document.addEventListener("DOMContentLoaded", function() {
+    fetchRecipe();
+});
 
+module.exports = {createCard,getMotCle,ingredients,ustensiles,appareils};
