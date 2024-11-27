@@ -9,8 +9,8 @@ header {
     padding-top: 125px;
     padding-bottom: 125px;
     text-align: center;
-    color: black;
-    background-image: url('../images/header.avif');
+    color: white;
+    background-image: url('../images/header.jpg');
     background-size: cover;
 
     input{
@@ -21,6 +21,7 @@ header {
         padding-right:40px;
         border: 2px solid black;
         border-radius: 10px;
+        color: black;
     }
 }
 
@@ -29,7 +30,7 @@ header {
     margin-right: 100px;
     margin-left: 100px;
 
-    .recherche{
+    .recherche{ 
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -44,10 +45,38 @@ header {
             input{
                 width: 100px;
             }
+
+            .listMotCle{
+                position: absolute;
+                margin-top: 8px;
+                max-height: 15em;
+                overflow-y: auto;
+                background-color: white;
+
+                input {
+                    border: 2px solid black;
+                    border-radius: 10px;
+                    padding-left: 5px;
+                    width: auto;
+                }
+            }
         }
     
         p{
             flex-basis: calc(25%-10px);
+        }
+    }
+
+    #tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        p{
+            background-color: orange;
+            border-radius: 10px;
+            border: solid 3px orangered;
+            padding: 2px 5px 2px 5px;
         }
     }
 
@@ -60,7 +89,6 @@ header {
         .card{
             flex-basis: calc(33.333% - 50px);
             border: 1px solid black;
-            height: fit-content;
             border-radius: 10px;
         
             img{
